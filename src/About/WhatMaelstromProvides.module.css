@@ -1,0 +1,60 @@
+.whatMaelstromProvides {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+  padding: 54px 0;
+}
+.title {
+  font: var(--title-style);
+  color: var(--text-color);
+}
+.subtitle {
+  font: var(--subtitle-style);
+  color: #6c6c6c;
+}
+.monitor {
+  margin-top: 30px;
+  width: 625px;
+  height: 520px;
+  background: url("../img/imac-parallax.png") no-repeat center/contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.monitorDisplay {
+  width: 86.7%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.monitorDisplaySlider {
+  position: absolute;
+  top: 23px;
+  transition: 0.5s;
+  height: 58.7%;
+  display: flex;
+}
+.sliderImg {
+  width: 543px;
+  height: 100%;
+  background: no-repeat center / cover;
+}
+
+/* --------media-------- */
+@media screen and (max-width: 425px) {
+  .monitor {
+    width: 300px;
+    height: 195px;
+  }
+  .sliderImg{
+    width: 218px;
+  }
+  .monitorDisplaySlider{
+    top: 8.5px;
+  }
+  .monitorDisplay{
+    width: 67.9%;
+  }
+}

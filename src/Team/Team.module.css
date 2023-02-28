@@ -1,0 +1,70 @@
+.team {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding-bottom: 70px;
+
+}
+.title {
+  font: var(--title-style);
+  color: var(--text-color);
+
+}
+.subtitle {
+  font: var(--subtitle-style);
+  color: #6c6c6c;;
+}
+.teamMemberInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 237px;
+  height: 442.5px;
+  gap: 10px;
+}
+.teamMembers {
+  width: 90%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.teamMember {
+  width: 237px;
+  height: 260px;
+  background: no-repeat center / cover;
+}
+
+.name {
+  font: 100 24px sans-serif;
+  color: #6c6c6c;
+}
+.profession {
+  font: 100 12px sans-serif;
+}
+.aboutATeamMember {
+  font: 100 16px sans-serif;
+  line-height: 23px;
+}
+.heroHeader {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.555);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: lightgray;
+  font-size: 80px;
+  font-weight: 100;
+  scale: 0;
+  position: relative;
+}
+.teamMember:hover .heroHeader {
+    scale: 100%;
+    transition: 0.7s;
+  }

@@ -1,0 +1,102 @@
+.footer {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #54595f;
+}
+.footerSection1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 45px;
+}
+.contacts,
+.sections,
+.section {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 214px;
+  height: 205px;
+  justify-content: space-between;
+}
+.contactsName {
+  font: 300 25px sans-serif;
+  padding-bottom: 30px;
+}
+.sectionsName {
+  font: 100 18px sans-serif;
+  color: white;
+  padding-bottom: 30px;
+}
+.section {
+  color: rgba(211, 211, 211, 0.591);
+  font: 100 16px sans-serif;
+}
+.icon {
+  color: var(--text-color);
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.registration {
+  width: 240px;
+  gap: 0px;
+}
+.registration > form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.subscribeButton {
+  background: var(--text-color);
+  border: none;
+  font-size: 18px;
+  color: white;
+  font-weight: 100;
+  cursor: pointer;
+}
+.subscribeButton:hover {
+  background: #63686e;
+  color: var(--text-color);
+  transition: 0.5s;
+}
+input::placeholder {
+  color: white;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.footerInfo {
+  width: 100%;
+  height: 50px;
+  background: #43464d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  color: rgba(211, 211, 211, 0.591);
+}
+.contactsIcons {
+  font-size: 25px;
+}
+
+.contacts,
+.sections,
+.registration {
+  margin-top: 25px;
+}
+
+/* -----media------- */
+
+@media screen and (max-width: 425px) {
+  .footerInfo > div > p {
+    font-size: 8px;
+  }
+  .contactsIcons {
+    font-size: 10px;
+  }
+}

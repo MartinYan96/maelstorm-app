@@ -1,0 +1,69 @@
+.options {
+  display: flex;
+  position: fixed;
+  top: 33%;
+  z-index: 10;
+  transition: 0.5s;
+}
+.options .optionMenu {
+  width: 220px;
+  height: 309px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 2px black, 0 0 4px black, 0 0 8px black, 0 0 16px black,
+    0 0 32px black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.options .optionButton {
+  position: absolute;
+  left: 225px;
+  top: 30px;
+  width: 102px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  transform: rotate(-90deg);
+  border: none;
+  font: 100 18px sans-serif;
+  cursor: pointer;
+}
+.options .colorsMenu {
+  width: 170px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.options .colorsMenu .colorOptionTitle,
+.themeOptionTitle {
+  font: 100 18px sans-serif;
+  padding: 0 10px 10px 0;
+}
+.options .colorsMenu .themeOptionTitle {
+  margin-top: 50px;
+}
+.options .colorsMenu .textColors,
+.themeColors {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* ------media-------
+ */
+@media screen and (max-width: 425px) {
+  .options .optionMenu {
+    width: 200px;
+    height: 289px;
+  }
+  .options .optionButton {
+    width: 83px;
+    top: 21px;
+    font-size: 14px;
+    left: 230px;
+  }
+}

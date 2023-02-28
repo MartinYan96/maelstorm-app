@@ -1,0 +1,162 @@
+.header {
+  background: url("../img/header.jpg") no-repeat center / cover fixed;
+  width: 100%;
+  min-height: 500px;
+}
+.heroHeader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.17);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.headerName {
+  font: 100 80px sans-serif;
+  color: white;
+}
+.headerPageInfo {
+  width: 55%;
+  height: 165px;
+  min-height: 165px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+.headerPageInfoFon {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.419);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerPageInfoSlidersFrame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font: 100 50px sans-serif;
+  text-align: center;
+  color: white;
+}
+.headerPageInfoSliders {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.headerPageInfoslide {
+  padding: 20px 100px;
+  height: 100%;
+}
+.headerPageInfoSlideColorText {
+  color: var(--text-color);
+  height: 100%;
+}
+.spreadTheWord {
+  font: 100 25px sans-serif;
+  color: white;
+}
+.headerSocialLinks {
+  width: 223px;
+  height: 25px;
+  font-size: 16px;
+  display: flex;
+  gap: 15px;
+}
+.headerSocialLinksFrame {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.419);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.headerSocialLinksFrame:hover {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.headerAngleDown {
+  font-size: 40px;
+  color: white;
+  margin-top: 50px;
+}
+
+/* --------media----------- */
+
+@media screen and (max-width: 1440px) {
+  .headerName {
+    font-size: 70px;
+  }
+  .headerPageInfo {
+    width: 45%;
+  }
+  .headerPageInfoSlidersFrame {
+    font-size: 43px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .headerName {
+    font-size: 60px;
+  }
+  .headerPageInfo {
+    width: 60%;
+  }
+  .headerPageInfoSlidersFrame {
+    font-size: 43px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .headerPageInfo {
+    height: 130px;
+    min-height: 130px;
+  }
+  .headerPageInfoSlidersFrame {
+    font-size: 33px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .headerName {
+    font-size: 50px;
+  }
+  .headerPageInfo {
+    height: 100px;
+    min-height: 100px;
+  }
+  .headerPageInfoSlidersFrame {
+    font-size: 20px;
+  }
+  .headerPageInfoslide {
+    padding: 20px 20px;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .headerName {
+    font-size: 50px;
+  }
+  .headerPageInfo {
+    height: 80px;
+    min-height: 80px;
+  }
+  .headerPageInfoSlidersFrame {
+    font-size: 16px;
+  }
+  .headerPageInfoslide {
+    padding: 20px 20px;
+    height: 100%;
+  }
+  .heroHeader {
+    justify-content: space-around;
+    padding: 100px 0;
+  }
+}

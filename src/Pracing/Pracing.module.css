@@ -1,0 +1,114 @@
+.pracing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px 0;
+  gap: 20px;
+  text-align: center;
+}
+.title {
+  font: var(--title-style);
+  color: var(--text-color);
+}
+.subtitle {
+  font: var(--subtitle-style);
+  color: #6c6c6c;
+}
+.dataSections {
+  width: 90%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+
+}
+.data {
+  width: 330px;
+  height: 524px;
+  background: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.level {
+  font: 200 25px sans-serif;
+  color: white;
+}
+.select {
+  font: 200 16px sans-serif;
+  color: white;
+}
+.level,
+.select {
+  height: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6c6c6c;
+  border: none;
+}
+.professions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 24px;
+}
+.profession {
+  height: 46px;
+  width: 100%;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 200 12px sans-serif;
+  cursor: pointer;
+}
+.price {
+  font: 100 48px sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description {
+  font: 100 14px sans-serif;
+  text-align: center;
+  line-height: 23px;
+  padding: 0 24px;
+}
+.colorText {
+  padding-right: 4px;
+  color: var(--text-color);
+}
+.data:hover .select {
+  background: #000;
+  transition: 0.5s;
+}
+.data:hover .level {
+  background: #000;
+  transition: 0.5s;
+}
+.data:hover {
+  box-shadow: 0 0 2px black, 0 0 4px black, 0 0 6px black, 0 0 8px black;
+}
+#level1,
+#select1 {
+  background: var(--text-color);;
+}
+
+
+
+
+/* -----media----- */
+
+
+@media screen and (max-width: 320px) {
+  .data {
+    width: 280px;
+    height: 500px;
+
+  }
+}
