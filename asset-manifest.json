@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/maelstorm-app/static/css/main.72e24951.css",
+    "main.css": "/maelstorm-app/static/css/main.3f91c56e.css",
     "main.js": "/maelstorm-app/static/js/main.8bd1b019.js",
     "static/js/787.a2bf511c.chunk.js": "/maelstorm-app/static/js/787.a2bf511c.chunk.js",
     "static/media/3.jpg": "/maelstorm-app/static/media/3.66e59812f57846bc40f8.jpg",
@@ -25,12 +25,12 @@
     "static/media/team-4.jpg": "/maelstorm-app/static/media/team-4.45753aa737a686b86b82.jpg",
     "static/media/10.jpg": "/maelstorm-app/static/media/10.fec7815cdb6eab5ad994.jpg",
     "index.html": "/maelstorm-app/index.html",
-    "main.72e24951.css.map": "/maelstorm-app/static/css/main.72e24951.css.map",
+    "main.3f91c56e.css.map": "/maelstorm-app/static/css/main.3f91c56e.css.map",
     "main.8bd1b019.js.map": "/maelstorm-app/static/js/main.8bd1b019.js.map",
     "787.a2bf511c.chunk.js.map": "/maelstorm-app/static/js/787.a2bf511c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.72e24951.css",
+    "static/css/main.3f91c56e.css",
     "static/js/main.8bd1b019.js"
   ]
 }
