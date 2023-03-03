@@ -1,11 +1,12 @@
 .services{
     display: flex;
     width: 100%;
+    min-height: 70vh;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 230px;
     background: url(../img/parallax-bg-2--xlarge.jpg) no-repeat center/cover fixed;
     color: white;
     font-family: sans-serif;
@@ -52,4 +53,12 @@
 }
 .sections{
     cursor:pointer
+}
+
+/* -------media-------- */
+@media screen and (max-width: 1440px) {
+    .services{
+        padding: 50px 0px;
+    }
+    
 }

@@ -43,7 +43,7 @@
   margin: 45px 0;
 }
 .project {
-  width: 350px;
+  width: 522px;
   height: 245px;
   background: no-repeat center / cover;
   cursor: pointer;
@@ -86,15 +86,22 @@
 
 /* ---------media---------- */
 
-@media screen and (max-width: 375px) {
-  .projects{
-    padding: 0 20px;
+  @media screen and (max-width: 1440px) {
+    .project {
+      width: 350px;
+    }
   }
-}
-@media screen and (max-width: 425px) {
-  .categorySelection{
-    gap: 6px;
-    flex-wrap: wrap;
-    text-align: center;
+
+  @media screen and (max-width: 425px) {
+    .categorySelection{
+      gap: 6px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
   }
-}
+  
+  @media screen and (max-width: 375px) {
+    .projects{
+      padding: 0 20px;
+    }
+  }

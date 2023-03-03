@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import style from './ReviewsOfCustumers.module.css'
 
+let interval = null
 function ReviewsOfCustumers({ textColor }) {
     const [current, setCurrent] = useState(0)
     const [opacity, setOpacity] = useState(1)
+ 
 
 
     let reviewText = ["❝GRAPHIC DESIGN IS THE", "❝DESIGN IS A CONSTANT CHALLENGE TO", "The"]
@@ -12,7 +14,7 @@ function ReviewsOfCustumers({ textColor }) {
     let custumersNames = ["- George Santayana", "- Donna Karan", "- Venus Williams"]
 
     function nextIcon() {
-       
+
         setOpacity(0)
         setTimeout(() => {
             setOpacity(1)
@@ -32,6 +34,11 @@ function ReviewsOfCustumers({ textColor }) {
             }
         }, 700)
     }
+    useEffect(() => {
+        interval = setInterval(() => { nextIcon() }, 2000)
+        return () => clearInterval(interval);
+    })
+
     return (
         <div className={style.reviewsOfCustumers}>
             <div className={style.tiileFrame}>
@@ -42,8 +49,14 @@ function ReviewsOfCustumers({ textColor }) {
                 <hr style={{ width: "14%", border: "none", borderTop: "1px solid #6c6c6c" }} />
                 <p className={style.custumersName} style={{ opacity: `${opacity}` }}>{custumersNames[current]}</p>
                 <div className={style.sliderButtonFrame}>
-                    <button className={style.prev} onClick={prevIcon}>{"<<"}</button>
-                    <button className={style.next} onClick={nextIcon}>{">>"}</button>
+                    <button className={style.prev} onClick={() => {
+                        prevIcon()
+                        clearInterval(interval)
+                    }}>{"<<"}</button>
+                    <button className={style.next} onClick={() => {
+                        nextIcon()
+                        clearInterval(interval)
+                    }}>{">>"}</button>
                 </div>
             </div>
         </div>

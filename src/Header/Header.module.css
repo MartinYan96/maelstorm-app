@@ -19,7 +19,7 @@
   color: white;
 }
 .headerPageInfo {
-  width: 55%;
+  width: 40%;
   height: 165px;
   min-height: 165px;
   border-top: 3px solid white;
@@ -51,7 +51,7 @@
   height: 100%;
 }
 .headerPageInfoslide {
-  padding: 20px 100px;
+  padding: 20px 120px;
   height: 100%;
 }
 .headerPageInfoSlideColorText {
@@ -101,6 +101,9 @@
   }
   .headerPageInfoSlidersFrame {
     font-size: 43px;
+  }
+  .headerPageInfoslide {
+    padding: 20px 100px;
   }
 }
 @media screen and (max-width: 1024px) {
