@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import style from './ReviewsOfCustumers.module.css'
 
 let interval = null
-function ReviewsOfCustumers({ textColor }) {
+function ReviewsOfCustumers({ textColor ,textIconText}) {
     const [current, setCurrent] = useState(0)
     const [opacity, setOpacity] = useState(1)
  
@@ -49,11 +49,11 @@ function ReviewsOfCustumers({ textColor }) {
                 <hr style={{ width: "14%", border: "none", borderTop: "1px solid #6c6c6c" }} />
                 <p className={style.custumersName} style={{ opacity: `${opacity}` }}>{custumersNames[current]}</p>
                 <div className={style.sliderButtonFrame}>
-                    <button className={style.prev} onClick={() => {
+                    <button className={`${style.prev} ${textIconText}`} onClick={() => {
                         prevIcon()
                         clearInterval(interval)
                     }}>{"<<"}</button>
-                    <button className={style.next} onClick={() => {
+                    <button className={`${style.prev} ${textIconText}`} onClick={() => {
                         nextIcon()
                         clearInterval(interval)
                     }}>{">>"}</button>

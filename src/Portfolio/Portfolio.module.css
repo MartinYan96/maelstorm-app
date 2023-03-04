@@ -47,6 +47,8 @@
   height: 245px;
   background: no-repeat center / cover;
   cursor: pointer;
+  transition: all 0.7s ease-in-out;
+
 }
 .heroHeader {
   width: 100%;
@@ -60,6 +62,8 @@
   font-weight: 100;
   scale: 0;
   position: relative;
+  transition: all 0.5s ease-in-out;
+
 }
 .project:hover .heroHeader {
   scale: 100%;
@@ -69,10 +73,9 @@
 .project:hover .posterDesign {
   opacity: 1;
   bottom: 10%;
+  transition-delay: 0.7s;
 }
 .posterDesign {
-  transition: 0.5s;
-  transition-delay: 0.7s;
   bottom: 0;
   opacity: 0;
   position: absolute;
@@ -81,6 +84,7 @@
   color: white;
   display: flex;
   justify-content: center;
+  transition: all 0.5s ease-in-out;
 }
 
 

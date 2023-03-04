@@ -3,7 +3,8 @@ import { FaFacebookF, FaVimeoV, FaPinterestP, FaAngleDown } from 'react-icons/fa
 import { AiOutlineTwitter, AiOutlineGooglePlus } from 'react-icons/ai';
 import style from './Header.module.css'
 
-function Header({ textColor }) {
+
+function Header({ textColor,  hoverIconColors }) {
     let headerHeight = window.innerHeight;
     const [headerSliderCurrent, setheaderSliderCurrent] = useState(0);
     const [headerSliderTransitions, setheaderSliderTransitions] = useState(0.5);
@@ -16,8 +17,8 @@ function Header({ textColor }) {
         }, 3000);
         return () => clearInterval(interval);
     }, []);
-    
-    
+
+
     useEffect(() => {
         if (headerSliderCurrent === -400) {
             setheaderSliderCurrent(0)
@@ -26,11 +27,13 @@ function Header({ textColor }) {
         if (headerSliderTransitions === 0 && headerSliderCurrent === -100) {
             setheaderSliderTransitions(.5)
         }
-        
-    },[headerSliderCurrent,headerSliderTransitions])
+
+    }, [headerSliderCurrent, headerSliderTransitions])
+
+
 
     return (
-        <header className={style.header} style={{height:headerHeight}}>
+        <header className={style.header} style={{ height: headerHeight }}>
             <div className={style.heroHeader}>
                 <h1 className={style.headerName}>MAELSTORM</h1>
                 <div className={style.headerPageInfo}>
@@ -47,11 +50,11 @@ function Header({ textColor }) {
                 </div>
                 <p className={style.spreadTheWord}>SPREAD THE WORD</p>
                 <div className={style.headerSocialLinks}>
-                    <a href="https://ru-ru.facebook.com/" className={style.headerSocialLinksFrame}><FaFacebookF /></a>
-                    <a href="https://twitter.com/?lang=ru" className={style.headerSocialLinksFrame}><AiOutlineTwitter /></a>
-                    <a href="https://vimeo.com/" className={style.headerSocialLinksFrame}><FaVimeoV /></a>
-                    <a href="https://www.google.com/" className={style.headerSocialLinksFrame}><AiOutlineGooglePlus /></a>
-                    <a href="https://www.pinterest.com/" className={style.headerSocialLinksFrame}><FaPinterestP /></a>
+                    <a href="https://ru-ru.facebook.com/" className={`${style.headerSocialLinksFrame} ${ hoverIconColors}`}><FaFacebookF /></a>
+                    <a href="https://twitter.com/?lang=ru" className={`${style.headerSocialLinksFrame} ${ hoverIconColors}`}><AiOutlineTwitter /></a>
+                    <a href="https://vimeo.com/" className={`${style.headerSocialLinksFrame} ${ hoverIconColors}`}><FaVimeoV /></a>
+                    <a href="https://www.google.com/" className={`${style.headerSocialLinksFrame} ${ hoverIconColors}`}><AiOutlineGooglePlus /></a>
+                    <a href="https://www.pinterest.com/" className={`${style.headerSocialLinksFrame} ${ hoverIconColors}`}><FaPinterestP /></a>
                 </div>
                 <FaAngleDown className={style.headerAngleDown} onClick={scrollPage} />
             </div>

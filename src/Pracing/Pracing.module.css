@@ -23,33 +23,46 @@
   justify-content: center;
   margin-top: 50px;
   flex-wrap: wrap;
-
 }
 .data {
   width: 330px;
-  height: 524px;
+  height: 544px;
   background: #e8e8e8;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.level {
-  font: 200 25px sans-serif;
-  color: white;
-}
 .select {
   font: 200 16px sans-serif;
-  color: white;
+  
 }
 .level,
 .select {
   height: 65px;
   width: 100%;
   display: flex;
+  color: white;
   align-items: center;
   justify-content: center;
   background: #6c6c6c;
   border: none;
+}
+.level {
+  font: 200 25px sans-serif;
+  height: 85px;
+  clip-path: polygon(
+    50% 0%,
+    100% 0,
+    100% 35%,
+    100% 80%,
+    56% 80%,
+    50% 100%,
+    44% 80%,
+    0 80%,
+    0 0,
+    0 0
+  );
+  padding-bottom: 10px;
 }
 .professions {
   display: flex;
@@ -96,19 +109,14 @@
 }
 #level1,
 #select1 {
-  background: var(--text-color);;
+  background: var(--text-color);
 }
 
-
-
-
 /* -----media----- */
-
 
 @media screen and (max-width: 320px) {
   .data {
     width: 280px;
     height: 500px;
-
   }
 }

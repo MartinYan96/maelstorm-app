@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { css } from '@emotion/css'
 import './App.css';
 import Header from './Header/Header.jsx'
 import Options from './components/Options/Options.jsx'
@@ -12,6 +13,7 @@ import Data from './Portfolio/Data';
 import Pracing from './Pracing/Pracing';
 import Team from './Team/Team';
 import Footer from './Footer/Footer';
+
 
 
 function App() {
@@ -35,15 +37,22 @@ function App() {
   function textChangingColor(event) {
     settextColor(event.target.style.backgroundColor)
   }
+  
+  const  hoverIconColors = css`
+  &:hover {
+    color: ${textColor};
+  }
+  `
+ 
   return (
     <div className="App" >
       <NavMenu />
       <Options textColors={textColors} themeColors={themeColors} textChangingColor={textChangingColor} />
-      <Header textColor={textColor} />
+      <Header textColor={textColor}  hoverIconColors={ hoverIconColors} />
       <AboutTheMaleStromTheme textColor={textColor} />
-      <ReviewsOfCustumers textColor={textColor} />
+      <ReviewsOfCustumers textColor={textColor}  hoverIconColors={ hoverIconColors}/>
       <WhatMaelstromProvides textColor={textColor} />
-      <Services textColor={textColor} />
+      <Services textColor={textColor}  hoverIconColors={ hoverIconColors}/>
       <Portfolio textColor={textColor} />
       <Data textColor={textColor} />
       <Pracing textColor={textColor} />

@@ -48,7 +48,10 @@
     opacity: 1;
     top: -50px;
 }
-.sections:hover .icon{
+.icon{
+    transition: all .3s ease-in-out;
+}
+.icon:hover{
     color: var(--text-color);
 }
 .sections{

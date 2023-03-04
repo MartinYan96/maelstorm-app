@@ -78,6 +78,7 @@
   align-items: center;
   justify-content: center;
   color: white;
+  transition: all 0.3s ease-in-out;
 }
 .headerSocialLinksFrame:hover {
   cursor: pointer;

@@ -1,9 +1,10 @@
 import { FaTabletAlt, FaTable, FaWrench, FaHtml5, FaTint, FaFileAlt, FaCode, FaRocket } from 'react-icons/fa';
 import style from './Services.module.css'
+import { css } from '@emotion/css';
 
 
 
-function Services() {
+function Services({ hoverIconColors}) {
     const sectionIcons = [
         FaWrench,
         FaTabletAlt,
@@ -45,7 +46,7 @@ function Services() {
             cumque quos maiores quae officiis magni.`
         },
         {
-            title:'COMMENTED CODE',
+            title: 'COMMENTED CODE',
             description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, nam quaerat sit! Quasi magni esse fuga
             modi ex libero deserunt.`
         },
@@ -54,21 +55,15 @@ function Services() {
             description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, ex nam dolorem nesciunt corporis
             quisquam saepe omnis sunt natus nostrum!`
         }
-        
-        
-        
-        
-        
-        
-        
     ]
+
 
     return (
         <div className={style.services}>
             {sectionIcons.map((Icon, index) => {
                 return (
                     <div key={index} className={style.sections} >
-                        <Icon className={style.icon} style={{ fontSize: '45px' }} />
+                        <Icon className={`${style.icon} ${ hoverIconColors}`} style={{ fontSize: '45px' }} />
                         <h3 className={style.title}>{sectionsTitle[index].title}</h3>
                         <p className={style.description}>{sectionsTitle[index].description}</p>
                         <span className={style.tooltip}>An Awesome Tooltip</span>
