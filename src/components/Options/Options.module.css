@@ -4,6 +4,7 @@
   top: 33%;
   z-index: 10;
   transition: 0.5s;
+  left: -250px;
 }
 .options .optionMenu {
   width: 220px;
@@ -64,6 +65,12 @@
     width: 83px;
     top: 21px;
     font-size: 14px;
-    left: 230px;
+    left: 200px;
   }
+  .options {
+    left: -215px;
+  }
+}
+.active{
+  left: 0
 }

@@ -17,7 +17,7 @@ import Footer from './Footer/Footer';
 
 
 function App() {
-  const [textColor, settextColor] = useState('');
+  const [textColor, settextColor] = useState( 'rgb(155, 89, 182)',);
   const textColors = [
     'rgb(41, 128, 185)',
     'rgb(95, 116, 136)',
@@ -54,7 +54,7 @@ function App() {
       <WhatMaelstromProvides textColor={textColor} />
       <Services textColor={textColor}  hoverIconColors={ hoverIconColors}/>
       <Portfolio textColor={textColor} />
-      <Data textColor={textColor} />
+      <Data textColor={textColor} hoverIconColors={hoverIconColors}/>
       <Pracing textColor={textColor} />
       <Team textColor={textColor} />
       <Footer textColor={textColor} />

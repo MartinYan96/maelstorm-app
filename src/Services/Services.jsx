@@ -1,6 +1,6 @@
 import { FaTabletAlt, FaTable, FaWrench, FaHtml5, FaTint, FaFileAlt, FaCode, FaRocket } from 'react-icons/fa';
 import style from './Services.module.css'
-import { css } from '@emotion/css';
+
 
 
 

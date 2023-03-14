@@ -1,14 +1,12 @@
-import { useState } from 'react';
 import style from './Options.module.css';
 
 function Options({ textColors, themeColors, textChangingColor }) {
-    const [isOpenMenu, setIsOpenMenu] = useState(true);
-
 
     function onToggle() {
-        setIsOpenMenu((prev)=> !prev)
+        const options = document.querySelector(`.${style.options}`)
+        options.classList.toggle(`${style.active}`)
     }
-    return <div className={style.options} style={{ left: `${isOpenMenu ? -250 : 0}px` }}>
+    return <div className={style.options}>
         <div className={style.optionMenu}>
             <div className={style.colorsMenu}>
                 <h3 className={style.colorOptionTitle}>COLOR OPTIONS</h3>
