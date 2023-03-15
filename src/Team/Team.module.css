@@ -7,16 +7,15 @@
   gap: 20px;
   text-align: center;
   padding-bottom: 70px;
-
+  background: var(--themeColorWhite);
 }
 .title {
   font: var(--title-style);
   color: var(--text-color);
-
 }
 .subtitle {
   font: var(--subtitle-style);
-  color: #6c6c6c;;
+  color: var(--subtitleColor);
 }
 .teamMemberInfo {
   display: flex;
@@ -42,14 +41,16 @@
 
 .name {
   font: 100 24px sans-serif;
-  color: #6c6c6c;
+  color: var(--subtitleColor);
 }
 .profession {
   font: 100 12px sans-serif;
+  color: var(--themeColorBlack);
 }
 .aboutATeamMember {
   font: 100 16px sans-serif;
   line-height: 23px;
+  color: var(--themeColorBlack);
 }
 .heroHeader {
   width: 100%;
@@ -58,13 +59,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: lightgray;
+  color: var(--subtitleColor);
   font-size: 80px;
   font-weight: 100;
   scale: 0;
   position: relative;
 }
 .teamMember:hover .heroHeader {
-    scale: 100%;
-    transition: 0.7s;
-  }
+  scale: 100%;
+  transition: 0.7s;
+}

@@ -22,8 +22,9 @@
   width: 40%;
   height: 165px;
   min-height: 165px;
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
+  transition: all .5s;
+  border-top: 3px solid var(--themeColorWhite);
+  border-bottom: 3px solid var(--themeColorWhite);
 }
 .headerPageInfoFon {
   width: 100%;

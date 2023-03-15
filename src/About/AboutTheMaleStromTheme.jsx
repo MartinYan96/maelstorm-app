@@ -4,27 +4,23 @@ import { useEffect, useRef, useState } from 'react';
 
 
 function AboutTheMaleStromTheme({ textColor }) {
-    const text = ` Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, tenetur perspiciatis
+    const info = ` Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, tenetur perspiciatis
     eos provident laborum eum dignissimos est consectetur cupiditate tempore culpa adipisci nostrum
     incidunt obcaecati voluptatem architecto fuga..`
 
-  
+
     const [windowInnerHeight, setWindowInnerHeight] = useState(false)
-    const [aboutIcon, setAboutIcon] = useState(true)
-    const [aboutIcon1, setAboutIcon1] = useState(true)
-    const [aboutIcon2, setAboutIcon2] = useState(true)
     const sectionPosition = useRef(0)
-
-
+    const infoTitle = ['RETINA READY DESIGN', 'RESPONSIVE, MOBILE FRIENDLY LAYOUT', 'MAKE IT YOUR OWN']
 
     useEffect(() => {
         document.addEventListener("scroll", () => {
             sectionPosition.current = window.pageYOffset + 300;
             sectionPosition.current >= window.innerHeight ?
-            setWindowInnerHeight(true) :
-            setWindowInnerHeight(false)
+                setWindowInnerHeight(true) :
+                setWindowInnerHeight(false)
         })
-    },[])
+    }, [])
 
     const stylesSection = {
         left: {
@@ -40,16 +36,21 @@ function AboutTheMaleStromTheme({ textColor }) {
             opacity: windowInnerHeight ? '1' : '0'
         }
     }
-    function iconeHocverEffect() {
-        setAboutIcon(!aboutIcon)
-    }
-    function iconeHocverEffect1() {
-        setAboutIcon1(!aboutIcon1)
-    }
-    function iconeHocverEffect2() {
-        setAboutIcon2(!aboutIcon2)
+    const iconeHocverEffect = (event) => {
+
+        const aboutIcons = document.querySelectorAll(`.${style.aboutIcons}`)
+        const description = document.querySelectorAll(`.${style.description}`)
+
+        aboutIcons.forEach((elem, ind, aboutIcons) => {
+            if (event.target === aboutIcons[ind] || aboutIcons[ind].contains(event.target)) {
+                aboutIcons[ind].classList.toggle(style.aboutIconsActive)
+                description[ind].classList.toggle(style.descriptionActive)
+            }
+        })
     }
 
+    const sectionPos = [stylesSection.left, stylesSection.bottom, stylesSection.right]
+    const icon = [<FaRegEye className='icon' />, <FaMobileAlt className='icon' />, <FaHeart className='icon' />]
 
 
     return (
@@ -57,48 +58,21 @@ function AboutTheMaleStromTheme({ textColor }) {
             <h2 className={style.title} style={{ color: textColor }}>ABOUT THE MAELSTROM THEME</h2>
             <h3 className={style.subtitle}>EVERYTHING YOU NEED TO BE STYLISH IN ONE CONVENIENT PLACE.</h3>
             <div className={style.info}>
-                <div className={style.section} style={stylesSection.left} >
-                    <div className={aboutIcon ?
-                        style.aboutIcons :
-                        style.aboutIconsActive}
-                        onClick={iconeHocverEffect}>
-                        <FaRegEye />
-                    </div>
-                    <h4>RETINA READY DESIGN</h4>
-                    <p style={aboutIcon ?
-                        { backgroundColor: "transparent", color: "black" } :
-                        { backgroundColor: "black", color: "white", borderRadius: "5px" }}>
-                        {text}
-                    </p>
-                </div>
-                <div className={style.section} style={stylesSection.bottom}>
-                    <div className={aboutIcon1 ?
-                        style.aboutIcons :
-                        style.aboutIconsActive}
-                        onClick={iconeHocverEffect1}>
-                        <FaMobileAlt />
-                    </div>
-                    <h4>RESPONSIVE, MOBILE FRIENDLY LAYOUT</h4>
-                    <p style={aboutIcon1 ?
-                        { backgroundColor: "transparent", color: "black" } :
-                        { backgroundColor: "black", color: "white", borderRadius: "5px" }}>
-                        {text}
-                    </p>
-                </div>
-                <div className={style.section} style={stylesSection.right}>
-                    <div className={aboutIcon2 ?
-                        style.aboutIcons :
-                        style.aboutIconsActive}
-                        onClick={iconeHocverEffect2}>
-                        <FaHeart />
-                    </div>
-                    <h4>MAKE IT YOUR OWN</h4>
-                    <p style={aboutIcon2 ?
-                        { backgroundColor: "transparent", color: "black" } :
-                        { backgroundColor: "black", color: "white", borderRadius: "5px" }}>
-                        {text}
-                    </p>
-                </div>
+                {
+                    infoTitle.map((item, index) => {
+                        return (
+                            <div key={index} className={style.section} style={sectionPos[index]}>
+                                <div className={style.aboutIcons} id={`aboutIcon${index}`} onClick={iconeHocverEffect}>
+                                    {icon[index]}
+                                </div>
+                                <h4>{item}</h4>
+                                <p className={style.description}>
+                                    {info}
+                                </p>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )

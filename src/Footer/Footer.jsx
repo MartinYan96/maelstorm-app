@@ -1,9 +1,9 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaTwitter, FaFacebookF, FaYoutube, FaPinterest } from 'react-icons/fa'
 import style from './Footer.module.css'
 
-function Footer({textColor}) {
+function Footer({textColor,optionsStyleBool}) {
     return (
-        <footer className={style.footer}>
+        <footer className={style.footer} style= {{borderTop: !optionsStyleBool ? '2px solid white': 'none'}}>
             <div className={style.footerSection1}>
                 <div className={style.contacts} >
                     <h3 className={style.contactsName} style={{ color: "white" }}>MAELSTORM</h3>

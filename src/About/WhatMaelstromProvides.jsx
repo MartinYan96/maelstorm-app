@@ -11,7 +11,7 @@ function WhatMaelstromProvides({ textColor }) {
     const current = useRef(0)
     const intervalRef = useRef(null)
 
-    function nextSlider() {
+    const nextSlider = () => {
         current.current = current.current + 1
         if (current.current === 5) {
             current.current = 0

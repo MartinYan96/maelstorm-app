@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import style from './ReviewsOfCustumers.module.css'
 
 let interval = null
-function ReviewsOfCustumers({ textColor ,textIconText}) {
+function ReviewsOfCustumers({ textColor, textIconText }) {
     const [current, setCurrent] = useState(0)
     const [opacity, setOpacity] = useState(1)
- 
+
 
 
     let reviewText = ["❝GRAPHIC DESIGN IS THE", "❝DESIGN IS A CONSTANT CHALLENGE TO", "The"]
@@ -13,7 +13,7 @@ function ReviewsOfCustumers({ textColor ,textIconText}) {
     let reviewTextContinue = [", ECCENTRICITY, HERESY, ABNORMALITY, HOBBIES AND HUMORS.❞", ", THE PRACTICAL WITH THE DESIRABLE.❞", " - THE HARMONY, RHYTHM AND BALANCE ARE ALL THE SAME WITH INTERIOR AND FASHION DESIGN.❞"]
     let custumersNames = ["- George Santayana", "- Donna Karan", "- Venus Williams"]
 
-    function nextIcon() {
+    const nextIcon = () => {
 
         setOpacity(0)
         setTimeout(() => {
@@ -24,7 +24,7 @@ function ReviewsOfCustumers({ textColor ,textIconText}) {
             }
         }, 500)
     }
-    function prevIcon() {
+    const prevIcon = () => {
         setOpacity(0)
         setTimeout(() => {
             setOpacity(1)

@@ -3,7 +3,7 @@
   gap: 20px;
   display: flex;
   flex-direction: column;
-  background: #54595f;
+  background:var(--footerBackgrondColor);
 }
 .footerSection1 {
   display: flex;

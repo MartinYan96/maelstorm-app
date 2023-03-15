@@ -4,13 +4,19 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   text-decoration: none;
-  list-style-type: none
+  list-style-type: none;
 }
 :root{
   --title-style: 100 35px sans-serif;
   --text-color: rgb(155, 89, 182);
-  --subtitle-style: 100 21px sans-serif
-
+  --subtitle-style: 100 21px sans-serif;
+  --themeColorWhite:white;
+  --themeColorBlack:black;
+  --subtitleColor:rgb(108,108,108);
+  --aboutTextColor:rgb(47,47,47);
+  --aboutIconsColor:rgba(0, 0, 0, 0.4);
+  --portfolioCategoryButtonColor:rgb(108,108,108);
+  --navmenu:rgb(236,240,241)
 }
 @media screen and (max-width: 768px) {
   :root{

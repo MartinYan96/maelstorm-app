@@ -6,24 +6,24 @@ import { useEffect } from 'react';
 function Portfolio({ textColor }) {
     const categoryNames = ['All', 'Illustration', 'Lettering', 'Logo', 'Web']
 
-    useEffect(()=>{
+    useEffect(() => {
         const categoryAll = document.querySelectorAll(`.${style.category}`)[0];
         categoryAll.style.background = textColor;
-        categoryAll.style.color= 'white';
+        categoryAll.style.color = 'white';
     })
 
-    function categorySelectionColor(event) {
+    const categorySelectionColor = (event) => {
         event.target.style.background = textColor
         event.target.style.color = 'white'
     }
 
-    function allProjectElem() {
+    const allProjectElem = () => {
         const myProject = document.querySelectorAll(`.${style.project}`);
         myProject.forEach(item => item.classList.remove(style.activeProject));
 
     }
 
-    function categorySelection(event) {
+    const categorySelection = (event) => {
         const myProject = document.querySelectorAll(`.${style.project}`);
         const myCategory = document.querySelectorAll(`.${style.category}`);
 
@@ -34,7 +34,7 @@ function Portfolio({ textColor }) {
             for (let categ of myCategory) {
                 if (event.target.id === 'categoryAll') {
                     allProjectElem()
-                    categ.style.background = 'white'
+                    categ.style.background = 'transparent'
                     categ.style.color = '#6c6c6c'
                     categorySelectionColor(event)
                 }
@@ -44,7 +44,7 @@ function Portfolio({ textColor }) {
                         continue;
                     }
                     item.classList.add(style.activeProject)
-                    categ.style.background = 'white'
+                    categ.style.background = 'transparent'
                     categ.style.color = '#6c6c6c'
                     categorySelectionColor(event)
 
@@ -55,7 +55,7 @@ function Portfolio({ textColor }) {
                         continue;
                     }
                     item.classList.add(style.activeProject)
-                    categ.style.background = 'white'
+                    categ.style.background = 'transparent'
                     categ.style.color = '#6c6c6c'
                     categorySelectionColor(event)
                 }
@@ -65,7 +65,7 @@ function Portfolio({ textColor }) {
                         continue;
                     }
                     item.classList.add(style.activeProject)
-                    categ.style.background = 'white'
+                    categ.style.background = 'transparent'
                     categ.style.color = '#6c6c6c'
                     categorySelectionColor(event)
                 }
@@ -75,12 +75,11 @@ function Portfolio({ textColor }) {
                         continue;
                     }
                     item.classList.add(style.activeProject)
-                    categ.style.background = 'white'
+                    categ.style.background = 'transparent'
                     categ.style.color = '#6c6c6c'
                     categorySelectionColor(event)
                 }
             }
-
         }
     }
 

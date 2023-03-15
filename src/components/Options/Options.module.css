@@ -9,12 +9,13 @@
 .options .optionMenu {
   width: 220px;
   height: 309px;
-  background-color: white;
+  background-color: var(--themeColorWhite);
   border-radius: 5px;
-  box-shadow: 0 0 2px black, 0 0 4px black, 0 0 8px black, 0 0 16px black,
-    0 0 32px black;
+  box-shadow: 0 0 2px var(--themeColorBlack), 0 0 4px var(--themeColorBlack), 0 0 8px var(--themeColorBlack);
   display: flex;
   flex-direction: column;
+  color: var(--themeColorBlack);
+  transition: all .5s;
   gap: 20px;
   padding: 20px;
 }
@@ -22,11 +23,12 @@
   position: absolute;
   left: 225px;
   top: 30px;
+  transition: all .5s;
   width: 102px;
   height: 40px;
   border-radius: 5px;
-  color: white;
-  background-color: black;
+  color: var(--themeColorWhite);
+  background-color: var(--themeColorBlack);
   transform: rotate(-90deg);
   border: none;
   font: 100 18px sans-serif;
@@ -52,6 +54,7 @@
   width: 25px;
   height: 25px;
   cursor: pointer;
+  border: none;
 }
 
 /* ------media-------

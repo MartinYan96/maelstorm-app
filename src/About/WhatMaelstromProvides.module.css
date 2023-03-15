@@ -5,6 +5,8 @@
   text-align: center;
   gap: 15px;
   padding: 54px 0;
+  background: var(--themeColorWhite);
+  transition: .5s;
 }
 .title {
   font: var(--title-style);
@@ -12,7 +14,7 @@
 }
 .subtitle {
   font: var(--subtitle-style);
-  color: #6c6c6c;
+  color: var(--subtitleColor);
 }
 .monitor {
   margin-top: 30px;

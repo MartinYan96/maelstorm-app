@@ -16,8 +16,10 @@ import Footer from './Footer/Footer';
 
 
 
+
 function App() {
-  const [textColor, settextColor] = useState( 'rgb(155, 89, 182)',);
+  const [textColor, settextColor] = useState('rgb(155, 89, 182)',);
+  const [optionsStyleBool, setOptionsStyleBool] = useState(false)
   const textColors = [
     'rgb(41, 128, 185)',
     'rgb(95, 116, 136)',
@@ -34,30 +36,30 @@ function App() {
     'rgb(50, 51, 51)',
     'rgb(236, 240, 241)'
   ]
-  function textChangingColor(event) {
+  const textChangingColor = (event) => {
     settextColor(event.target.style.backgroundColor)
   }
-  
-  const  hoverIconColors = css`
+
+  const hoverIconColors = css`
   &:hover {
     color: ${textColor};
   }
   `
- 
+  
   return (
     <div className="App" >
       <NavMenu />
-      <Options textColors={textColors} themeColors={themeColors} textChangingColor={textChangingColor} />
-      <Header textColor={textColor}  hoverIconColors={ hoverIconColors} />
+      <Options textColors={textColors} themeColors={themeColors} textChangingColor={textChangingColor} optionsStyleBool={setOptionsStyleBool} />
+      <Header textColor={textColor} hoverIconColors={hoverIconColors} />
       <AboutTheMaleStromTheme textColor={textColor} />
-      <ReviewsOfCustumers textColor={textColor}  hoverIconColors={ hoverIconColors}/>
+      <ReviewsOfCustumers textColor={textColor} hoverIconColors={hoverIconColors} />
       <WhatMaelstromProvides textColor={textColor} />
-      <Services textColor={textColor}  hoverIconColors={ hoverIconColors}/>
-      <Portfolio textColor={textColor} />
-      <Data textColor={textColor} hoverIconColors={hoverIconColors}/>
+      <Services textColor={textColor} hoverIconColors={hoverIconColors} />
+      <Portfolio textColor={textColor} optionsStyleBool={optionsStyleBool} />
+      <Data textColor={textColor} hoverIconColors={hoverIconColors} />
       <Pracing textColor={textColor} />
       <Team textColor={textColor} />
-      <Footer textColor={textColor} />
+      <Footer textColor={textColor} optionsStyleBool={optionsStyleBool} />
     </div>
   );
 }
