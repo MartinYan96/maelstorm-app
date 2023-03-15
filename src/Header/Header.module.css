@@ -90,6 +90,8 @@
   font-size: 40px;
   color: white;
   margin-top: 50px;
+  cursor: pointer;
+  transition: .3s;
 }
 
 /* --------media----------- */

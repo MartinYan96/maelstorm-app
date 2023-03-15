@@ -56,7 +56,7 @@ function Header({ textColor,  hoverIconColors }) {
                     <a href="https://www.google.com/" className={`${style.headerSocialLinksFrame} ${ hoverIconColors}`}><AiOutlineGooglePlus /></a>
                     <a href="https://www.pinterest.com/" className={`${style.headerSocialLinksFrame} ${ hoverIconColors}`}><FaPinterestP /></a>
                 </div>
-                <FaAngleDown className={style.headerAngleDown} onClick={scrollPage} />
+                <FaAngleDown className={`${style.headerAngleDown } ${ hoverIconColors}`} onClick={scrollPage} />
             </div>
         </header>
     )

@@ -24,6 +24,7 @@
   width: 237px;
   height: 442.5px;
   gap: 10px;
+  cursor: pointer;
 }
 .teamMembers {
   width: 90%;

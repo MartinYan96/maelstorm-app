@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  cursor: pointer;
 }
 .select {
   font: 200 16px sans-serif;
