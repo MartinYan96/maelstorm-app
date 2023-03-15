@@ -16,7 +16,8 @@
   --aboutTextColor:rgb(47,47,47);
   --aboutIconsColor:rgba(0, 0, 0, 0.4);
   --portfolioCategoryButtonColor:rgb(108,108,108);
-  --navmenu:rgb(236,240,241)
+  --navmenu:rgb(236,240,241);
+  --footerBackgrondColor:rgb(84,89,95)
 }
 @media screen and (max-width: 768px) {
   :root{
